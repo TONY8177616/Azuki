@@ -1,0 +1,44 @@
+const int seg7[]= {11,10,9,8,7,6,5};
+const int scan[]= {13,12,3,2};
+int delaytime=5,Result,set[4],Wrong;
+char TAB[]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x27,0x7F,0xEF};
+int ii,jj;
+void setup(){ // put your setup code here, to run once:
+for(ii=0;ii<7;ii++){
+pinMode(seg7[ii],OUTPUT);
+}
+for(ii=0;ii<4;ii++){
+pinMode(scan[ii],OUTPUT);
+digitalWrite(scan[ii],LOW);
+}
+Serial.begin(9600);
+ }
+void loop(){ // put your main code here, to run repeatedly:
+if(Serial.available()){
+delaytime=Serial.parseInt();
+Serial.println("ms");
+}
+}
+
+void Add(){
+   if(mills()-Lasttime)/1000=1){
+   cal[3]+=1;
+   if(cal[3]==10){
+   cal[2]==1;
+   cal[3]==0;
+   }
+}
+   if(cal[2]==6 && cal[3]==0){
+   cal[1]+=1;
+   cal[2]==0;
+   }
+   if(cal[1]==10){
+   cal[0]+=1;
+   cal[1]==0;
+   }
+   if(cal[0]=6&&cal[1]=0){
+   cal[0]=0;
+   }
+}
+ Lasttime=millis();
+}
